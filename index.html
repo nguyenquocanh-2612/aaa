@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quốc Anh Shop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS riêng -->
+  <link rel="stylesheet" href="chinh.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="#">Quốc Anh Models</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav me-3">
+          <li class="nav-item"><a class="nav-link" href="#home">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Sản phẩm</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Đánh giá</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Giới thiệu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Liên hệ</a></li>
+        </ul>
+        <button class="btn btn-outline-light position-relative cart-toggle">
+          🛒 <span
+            class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero d-flex align-items-center text-center text-white">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Thế giới Mô Hình Sưu Tầm</h1>
+      <p class="lead mb-4">Khám phá những mô hình độc đáo, chi tiết tinh xảo — chỉ có tại Đây!</p>
+      <button class="btn btn-primary btn-lg"
+        onclick="document.querySelector('#products').scrollIntoView({behavior:'smooth'})">Mua ngay</button>
+    </div>
+  </section>
+
+  <!-- Sản phẩm -->
+  <section id="products" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4">Sản phẩm nổi bật</h2>
+      <div id="product-list" class="row g-4"></div>
+    </div>
+  </section>
+
+  <!-- Đánh giá khách hàng -->
+<section id="reviews" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-5 text-uppercase">Đánh giá của khách hàng</h2>
+
+    <div class="row g-4">
+      <!-- Review 1 -->
+      <div class="col-md-4">
+        <div class="review-card p-4 rounded-4 shadow-sm h-100 position-relative">
+          <img src="https://i.pravatar.cc/80?img=12" alt="avatar" 
+               class="rounded-circle mb-3 border border-3 border-primary shadow-sm" width="80" height="80">
+          <p class="fst-italic text-muted">“Mô hình cực kỳ chi tiết, đóng gói cẩn thận và giao hàng nhanh!”</p>
+          <h6 class="fw-bold text-primary mt-3">Nam Phạm</h6>
+          <div class="text-warning mt-2">
+            ★★★★★
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="col-md-4">
+        <div class="review-card p-4 rounded-4 shadow-sm h-100 position-relative">
+          <img src="https://i.pravatar.cc/80?img=47" alt="avatar" 
+               class="rounded-circle mb-3 border border-3 border-primary shadow-sm" width="80" height="80">
+          <p class="fst-italic text-muted">“Lần đầu mua thử, không ngờ chất lượng vượt mong đợi. Sẽ quay lại!”</p>
+          <h6 class="fw-bold text-primary mt-3">Huyền Trân</h6>
+          <div class="text-warning mt-2">
+            ★★★★★
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="col-md-4">
+        <div class="review-card p-4 rounded-4 shadow-sm h-100 position-relative">
+          <img src="https://i.pravatar.cc/80?img=33" alt="avatar" 
+               class="rounded-circle mb-3 border border-3 border-primary shadow-sm" width="80" height="80">
+          <p class="fst-italic text-muted">“Dịch vụ khách hàng rất tận tâm. Mình được tư vấn kỹ trước khi mua.”</p>
+          <h6 class="fw-bold text-primary mt-3">Minh Đức</h6>
+          <div class="text-warning mt-2">
+            ★★★★★
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Giới thiệu -->
+  <section id="about" class="py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-3">Về chúng tôi</h2>
+      <p class="fs-5 text-muted">
+        <strong>Quốc Anh Model</strong> Chào mừng bạn đến với Quốc Anh Model – thiên đường của những người đam mê mô
+        hình và sưu tầm đỉnh cao!
+        Chúng tôi tự hào là điểm đến hàng đầu dành cho cộng đồng yêu thích các dòng mô hình nhân vật, figure anime, mô
+        hình tĩnh, mô hình xe, robot, và nhiều sản phẩm sưu tầm độc nhất vô nhị.
+
+        Với sứ mệnh mang đam mê thành hiện thực, Quốc Anh Model không chỉ là nơi bạn tìm thấy những sản phẩm chính hãng,
+        chất lượng cao, mà còn là không gian kết nối cảm xúc, nơi mọi tín đồ sưu tầm có thể chia sẻ niềm yêu thích, khơi
+        nguồn cảm hứng sáng tạo.
+      </p>
+    </div>
+  </section>
+
+  <!-- Liên hệ -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5 text-uppercase">Liên hệ với chúng tôi</h2>
+    <div class="row align-items-center">
+      
+      <!-- Cột bên trái: Form liên hệ -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Họ và tên" required />
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Email" required />
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" placeholder="Nội dung" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 py-2 fw-bold">Gửi</button>
+        </form>
+      </div>
+
+      <!-- Cột bên phải: Google Map -->
+      <div class="col-md-6">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4728597588432!2d106.63192447485693!3d10.775049589373646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ea144839ef1%3A0x798819bdcd0522b0!2zQ2FvIMSQ4bqzbmcgQ8O0bmcgTmdo4buHIFRow7RuZyBUaW4gVFAuSENN!5e0!3m2!1svi!2sus!4v1758264475606!5m2!1svi!2sus"
+          width="100%"
+          height="380"
+          style="border:0; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  
+
+  <!-- Overlay nền -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- Giỏ hàng -->
+  <aside class="cart-panel" id="cart-panel">
+    <div class="cart-header bg-dark text-white p-3 d-flex justify-content-between align-items-center">
+      <h5 class="mb-0">Giỏ hàng</h5>
+      <button id="close-cart" class="btn btn-sm btn-light fw-bold">×</button>
+    </div>
+    <div id="cart-items" class="p-3 flex-grow-1 overflow-auto"></div>
+    <div class="cart-footer p-3 border-top bg-light">
+      <p class="fw-bold mb-2">Tổng: <span id="cart-total">0₫</span></p>
+      <button id="checkout-btn" class="btn btn-success w-100">Thanh toán</button>
+    </div>
+  </aside>
+
+  <!-- Footer -->
+<footer class="bg-dark text-white text-center py-4 mt-5">
+  <div class="container">
+    <div class="mb-3">
+      <a href="https://www.facebook.com/login" target="_blank" class="text-white mx-2 fs-4">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/accounts/login/" target="_blank" class="text-white mx-2 fs-4">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.youtube.com/" target="_blank" class="text-white mx-2 fs-4">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.tiktok.com/login" target="_blank" class="text-white mx-2 fs-4">
+        <i class="fab fa-tiktok"></i>
+      </a>
+    </div>
+    <p class="mb-0">© 2025 Quốc Anh Model Shop. All rights reserved.</p>
+  </div>
+</footer>
+
+  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="chinh.js"></script>
+</body>
+
+</html>

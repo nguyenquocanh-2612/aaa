@@ -1,0 +1,193 @@
+/* ======================== CƠ BẢN ======================== */
+body {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* ======================== HERO ======================== */
+.hero {
+  background: url('./img/header.png') center/cover no-repeat;
+  min-height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ======================== MENU ======================== */
+.navbar-nav .nav-link {
+  position: relative;
+  color: #fff !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s, transform 0.3s;
+}
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #0d6efd;
+  transition: width 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+  color: #0d6efd !important;
+  transform: translateY(-2px);
+}
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+.navbar-nav .nav-link.active {
+  color: #0d6efd !important;
+}
+
+/* ======================== SẢN PHẨM ======================== */
+.product-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+  padding: 18px;
+  transition: 0.3s;
+}
+.product-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+.product-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.product-item h3 {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+.product-item button {
+  background: #0a84ff;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.product-item button:hover {
+  background: #0066d6;
+}
+
+/* ======================== GIỎ HÀNG ======================== */
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 360px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -3px 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.4s ease;
+  z-index: 1050;
+}
+.cart-panel.active {
+  right: 0;
+}
+
+/* Overlay mờ nền */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1040;
+}
+.overlay.active {
+  display: block;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+.cart-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.remove-btn {
+  border: none;
+  background: transparent;
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ======================== ĐÁNH GIÁ KHÁCH HÀNG ======================== */
+.review-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+.review-card img {
+  border-radius: 50%;
+  border: 3px solid #0d6efd;
+  box-shadow: 0 0 8px rgba(13,110,253,0.3);
+}
+.review-card p {
+  font-style: italic;
+  color: #555;
+}
+.review-card h6 {
+  color: #0d6efd;
+  font-weight: 600;
+}
+.review-card .text-warning {
+  font-size: 1.1rem;
+}
+
+/* ======================== FOOTER ======================== */
+footer {
+  background: #0a0a0a;
+  color: #ccc;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 0.95rem;
+}
+footer a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
