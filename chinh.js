@@ -104,6 +104,36 @@ function closeCart() {
 
 // ======== CHẠY LẦN ĐẦU ========
 renderProducts();
+// ======== ACTIVE MENU ITEM ========
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', function() {
+    // Xóa active ở tất cả các link
+    navLinks.forEach(l => l.classList.remove('active'));
+    // Thêm active cho link được click
+    this.classList.add('active');
+  });
+});
+// ======== ACTIVE MENU ITEM & AUTO CLOSE ON MOBILE ========
+
+const navbarCollapse = document.getElementById('navbarNav'); // phần menu ẩn/hiện
+
+navLinks.forEach(link => {
+  link.addEventListener('click', function() {
+    // Xóa active cũ
+    navLinks.forEach(l => l.classList.remove('active'));
+    // Thêm active cho link hiện tại
+    this.classList.add('active');
+
+    // Nếu đang ở chế độ mobile thì tự đóng menu lại
+    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+    if (bsCollapse) {
+      bsCollapse.hide();
+    }
+  });
+});
+
 document.getElementById("checkout-btn").addEventListener("click", () => {
   if (cart.length === 0) {
     alert("Giỏ hàng của bạn đang trống!");
